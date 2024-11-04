@@ -12,9 +12,9 @@ Proses pembuatan model melibatkan beberapa langkah berikut:
 - Penanganan Nilai Ekstrim: Kolom Cholesterol dipotong (clipping) pada nilai maksimum 450 untuk menghindari efek dari outlier. Kolom Oldpeak juga dipotong pada rentang -0.5 hingga 4 untuk menjaga distribusi data yang lebih baik.
 - Pengubahan Kolom Kategorikal: Kolom kategorikal (Sex, ChestPainType, RestingECG, ExerciseAngina, dan ST_Slope) diubah menjadi variabel dummy untuk diintegrasikan ke dalam model pohon keputusan.
 - Dataset dibagi menjadi data latih (70%) dan data uji (30%) untuk mengevaluasi kinerja model secara objektif.
-- Unpruned Decision Tree: Model pertama dibuat tanpa pruning. Hasilnya, akurasi mencapai 100% pada data latih, tetapi hanya 73.5% pada data uji, yang menunjukkan adanya overfitting.
-- Prepruned Tree: Model kedua menggunakan teknik pre-pruning dengan batasan tertentu (max_depth=6, min_samples_split=10, dan min_samples_leaf=10). Akurasinya adalah 87% pada data latih dan 80.4% pada data uji, menunjukkan perbaikan dalam generalisasi.
-- Postpruned Tree: Model ketiga dilakukan dengan post-pruning (ccp_alpha=0.005). Model ini mencapai akurasi 85.7% pada data latih dan 86.9% pada data uji, memberikan keseimbangan yang lebih baik antara keduanya.
+- Unpruned Decision Tree: Model pertama dibuat tanpa pruning. Hasilnya, akurasi mencapai 100% pada data latih, tetapi hanya 75.3% pada data uji, yang menunjukkan adanya overfitting.
+- Prepruned Tree: Model kedua menggunakan teknik pre-pruning dengan batasan tertentu (max_depth=6, min_samples_split=10, dan min_samples_leaf=10). Akurasinya adalah 87% pada data latih dan 84% pada data uji, menunjukkan perbaikan dalam generalisasi.
+- Postpruned Tree: Model ketiga dilakukan dengan post-pruning (ccp_alpha=0.005). Model ini mencapai akurasi 85.5% pada data latih dan 85.8% pada data uji, memberikan keseimbangan yang lebih baik antara keduanya.
 
 Visualisasi dan Analisis
 -
